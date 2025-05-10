@@ -22,11 +22,22 @@ Most tools require both sender and receiver to install the same CLI.
 DropRelay lets **anyone download the file in a browser** — no tools, no setup, perfect for cross-device transfers.
 
 ## Architecture
-TBA
+```
+       [Sender CLI]
+          |
+       (wss://)
+          ↓
+   [ DropRelay Tunnel ]
+          ↑
+    (https GET request)
+          |
+   [ Receiver in Browser ]
+
+```
 
 ## Implementation status
-- [ ] Finalize design ( in progress )
-- [ ] Implement relay
+- [x] Finalize design
+- [ ] Implement relay ( in progress )
 - [ ] Host relay
 - [ ] Implement droprelay logic
 - [ ] Update installation manual 
