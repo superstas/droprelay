@@ -1,0 +1,32 @@
+run:
+  modules-download-mode: mod
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - errcheck
+    - errname
+    - gosimple
+    - govet
+    - goimports
+    - gocritic
+    - gofmt
+  fast: false
+  presets:
+    - comment
+    - unused
+
+linters-settings:
+  gosimple:
+    checks: [ "all" ]
+  gofmt:
+    simplify: true
+  govet:
+    enable:
+      - fieldalignment
+  goimports:
+    local-prefixes: github.com/superstas
+    keywords:
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
